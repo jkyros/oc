@@ -1,4 +1,4 @@
-package mco
+package machineconfig
 
 import (
 	"github.com/spf13/cobra"
@@ -17,8 +17,8 @@ var (
 		These commands help you deal with machineconfig on OpenShift.`)
 )
 
-// NewCmdMco exposes commands for modifying images.
-func NewCmdMco(f kcmdutil.Factory, streams genericclioptions.IOStreams) *cobra.Command {
+// NewCmdMachineconfig exposes commands for modifying images.
+func NewCmdMachineconfig(f kcmdutil.Factory, streams genericclioptions.IOStreams) *cobra.Command {
 	mco := &cobra.Command{
 		Use:   "machineconfig COMMAND",
 		Short: "Useful commands for managing machineconfig",
