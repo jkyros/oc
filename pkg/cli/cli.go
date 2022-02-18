@@ -34,6 +34,7 @@ import (
 	"github.com/openshift/oc/pkg/cli/login"
 	"github.com/openshift/oc/pkg/cli/logout"
 	"github.com/openshift/oc/pkg/cli/logs"
+	mco "github.com/openshift/oc/pkg/cli/machineconfig"
 	"github.com/openshift/oc/pkg/cli/newapp"
 	"github.com/openshift/oc/pkg/cli/newbuild"
 	"github.com/openshift/oc/pkg/cli/observe"
@@ -250,6 +251,7 @@ func NewOcCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 				kubectlwrappers.NewCmdClusterInfo(f, ioStreams),
 				kubectlwrappers.NewCmdDiff(f, ioStreams),
 				kubectlwrappers.NewCmdKustomize(ioStreams),
+				mco.NewCmdMco(f, ioStreams),
 			},
 		},
 		{
